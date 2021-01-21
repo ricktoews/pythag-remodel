@@ -163,8 +163,8 @@ function arrangeA(triple, layout) {
 function LabelASquared(props) {
 	var { layout, triple, corner } = props;
     var desc = layout === 'wraparound' 
-		? (<div>a<span>2</span> = {triple.a} x {triple.a}</div>) 
-		: (<div>a<span>2</span> = {corner}<span>2</span> + {corner}x{triple.b} + {corner}x{triple.b}</div>)
+		? (<div>a<span>2</span> = {triple.a} x {triple.a} ({triple.a*triple.a})</div>) 
+		: (<div style={{whiteSpace: 'nowrap'}}>a<span>2</span> = {corner}<span>2</span> + {corner}x{triple.b} + {corner}x{triple.b} ({triple.a*triple.a})</div>)
 	return (
     <div style={{ position: 'relative' }}>
       <div className="square a-square" style={{
